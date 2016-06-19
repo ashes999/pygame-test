@@ -1,15 +1,16 @@
 import pygame
 
 pygame.init()
-screen = pygame.display.set_mode((400, 300))
+screen = pygame.display.set_mode((640, 480))
 done = False
+
+image = pygame.image.load("logo.png")
 
 while not done:
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
       done = True
 
-  image = pygame.image.load("snake.png") 
-  screen.blit(image, (136, 86))
+  screen.blit(image, (70, 190))
         
   pygame.display.flip()
